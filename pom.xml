@@ -12,32 +12,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <profiles>
-        <profile>
-            <id>test</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <env>test</env>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>uat</id>
-            <properties>
-                <env>uat</env>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>uxt</id>
-            <properties>
-                <env>uxt</env>
-            </properties>
-        </profile>
-    </profiles>
-
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -109,7 +83,6 @@
     <build>
 <!--         Loading all ${}-->
         <filters>
-            <filter>src/test/resources/env/config.${env}.properties</filter>
         </filters>
 
 <!--         Map ${} into resources-->
